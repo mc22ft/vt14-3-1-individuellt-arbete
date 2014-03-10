@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Pro2014ASP.Pages.Shered.Site" ViewStateMode="Disabled" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Planket.se</title> <%--Contentplaceholder in här, 1:23 föreläsning 13--%>
+
+    <%-- Måste använda tilde täcken här!!!
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+</head>
+<body>
+    <form id="MainForm" runat="server">
+
+        <header>
+            <p>Header på masterpages</p>
+        </header>
+
+    <main role="main">
+
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server" >
+            </asp:ContentPlaceHolder>
+        
+        
+    </main>
+
+        <footer>
+            <p>Footer i masterpages</p>
+        </footer>
+
+    </form>
+    <%--Contentplaceholder in här för script som är unika. 1:24 föreläsning 13--%>
+</body>
+</html>
