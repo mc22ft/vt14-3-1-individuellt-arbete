@@ -18,9 +18,9 @@ namespace Pro2014ASP.Model.DAL
                 try
                 {
                     var adds = new List<Add>(100);
-
+                    //Programmability.Stored Procedures.AppSchema.usp_GetListOfAdds
                     //Lagrade proceduren in här
-                    var cmd = new SqlCommand("usp_GetListOfAdds", conn);
+                    var cmd = new SqlCommand("AppSchema.usp_GetListOfAdds", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     //Info på sidan 431 i boken
