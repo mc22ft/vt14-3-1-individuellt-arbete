@@ -15,8 +15,6 @@ namespace Pro2014ASP
 
             routes.MapPageRoute("Listing", "Annonser", "~/Pages/AddPages/Listing.aspx");
 
-
-
             //        routes.MapPageRoute("Customers",       "kunder",              "~/Pages/CustomerPages/Listing.aspx");
             //        routes.MapPageRoute("CustomerCreate",  "kunder/ny",           "~/Pages/CustomerPages/Create.aspx");
             //        routes.MapPageRoute("CustomerDetails", "kunder/{id}",         "~/Pages/CustomerPages/Details.aspx");
@@ -25,7 +23,7 @@ namespace Pro2014ASP
 
             //        routes.MapPageRoute("Error",            "serverfel",          "~/Pages/Shared/Error.aspx");
 
-            routes.MapPageRoute("Default", "DefaultSidan", "~/Pages/AddPages/Listing.aspx");
+            routes.MapPageRoute("Default", "", "~/Pages/AddPages/Listing.aspx");
         }
     }
 }

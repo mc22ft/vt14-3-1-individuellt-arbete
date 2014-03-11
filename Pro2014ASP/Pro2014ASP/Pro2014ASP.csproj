@@ -78,20 +78,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css.css" />
-    <Content Include="Global.ascx" />
+    <Content Include="Global.asax" />
     <Content Include="Pages\AddPages\Listing.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Infrastructure\MyValidationExtension.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Global.ascx.cs">
-      <DependentUpon>Global.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Global.ascx.designer.cs">
-      <DependentUpon>Global.ascx</DependentUpon>
-    </Compile>
+    <Compile Include="Model\Add.cs" />
+    <Compile Include="Model\DAL\AddDAL.cs" />
+    <Compile Include="Model\DAL\DALBase.cs" />
+    <Compile Include="Model\Service.cs" />
     <Compile Include="Pages\AddPages\Listing.aspx.cs">
       <DependentUpon>Listing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,8 +120,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Infrastructure\" />
-    <Folder Include="Model\DAL\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
