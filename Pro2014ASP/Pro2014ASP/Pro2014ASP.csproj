@@ -78,19 +78,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Global.ascx" />
     <Content Include="Pages\AddPages\Listing.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Global.ascx.cs">
+      <DependentUpon>Global.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Global.ascx.designer.cs">
+      <DependentUpon>Global.ascx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddPages\Listing.aspx.cs">
       <DependentUpon>Listing.aspx</DependentUpon>

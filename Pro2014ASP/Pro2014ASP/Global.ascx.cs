@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Pro2014ASP
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Global : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
