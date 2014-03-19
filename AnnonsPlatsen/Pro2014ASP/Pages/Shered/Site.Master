@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Pro2014ASP.Pages.Shered.Site" ViewStateMode="Disabled" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%: System.Web.Optimization.Styles.Render("~/Content/bootstrap") %>
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap") %>
+    <%-- Måste använda tilde täcken här!!!
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+</head>
+<body>
+    <header>
+
+
+        <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">mc22ft</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Hem</a></li>
+            <li><a href="#about">Om mig</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li class="Drop lista">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Lnu.se</a></li>
+            <li class="active"><a href="./">Sociala medier</a></li>
+            <li><a href="../navbar-fixed-top/">ASP.Net</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+
+
+        
+
+        
+    
+    </header>
+    
+    <div class="container">
+        <div class="starter-template">
+
+                <h1>PLANKET.SE</h1>
+      <asp:ContentPlaceHolder ID="MessageContentPlaceHolder" runat="server">
+            <div>
+                <h2>Annonser</h2>                
+            </div>
+          <div>
+              Säljes
+          </div>
+      </asp:ContentPlaceHolder>
+
+
+        <div class="link">
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/AddPages/CreateAdd.aspx">Annonsera</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Pages/AddPages/Listing.aspx">Startsida</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Pages/AddPages/CreateAdd.aspx">Min Annons</asp:HyperLink>
+        </div>
+
+    
+        <form id="MainForm" runat="server">
+
+      
+
+    <main role="main">
+
+        <div class="form-group">
+            <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server" >
+                </asp:ContentPlaceHolder>
+        </div>
+        
+    </main>
+
+        <footer>
+            <p>Footer i masterpages</p>
+        </footer>
+
+    </form>
+      </div>
+   </div><!-- /.container -->
+    <%--Contentplaceholder in här för script som är unika. 1:24 föreläsning 13--%>
+</body>
+</html>
