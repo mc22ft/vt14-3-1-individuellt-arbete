@@ -69,12 +69,14 @@
             <div>
                 <asp:TextBox ID="Contact" runat="server" Text='<%# BindItem.Contact %>' MaxLength="25"/>
             </div>
+<%-- default
              <div>
                 <label for="Area">Län --- DropDownLista Men funkar nu att skicka in 1-7</label>
             </div>
             <div>
                 <asp:TextBox ID="Area" runat="server" Text='<%# BindItem.Area %>' MaxLength="1"/>
             </div>
+--%>
         </div>
             <%-- Annons uppgifer --%>
             <div class="">
@@ -142,7 +144,7 @@
                     Display="None" 
                     SetFocusOnError="True">
                 </asp:RequiredFieldValidator>
-                 <%-- Län --%>
+                 <%-- Län 
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
                     ControlToValidate="Area"
                     ErrorMessage="Du måste ange ett län." 
@@ -157,7 +159,7 @@
                     Display="None" 
                     SetFocusOnError="True"
                     ValidationExpression="^[0-9]*$">                                
-                </asp:RegularExpressionValidator>
+                </asp:RegularExpressionValidator>--%>
                  <%-- Rubrik --%>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
                     ControlToValidate="HeadLine"

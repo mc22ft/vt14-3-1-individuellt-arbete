@@ -77,15 +77,57 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Pages\AddPages\AddEdit.aspx" />
     <Content Include="Content\css.css" />
+    <Content Include="Pages\AddPages\DetailsAdd.aspx" />
+    <Content Include="Pages\AddPages\CreateAdd.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Pages\AddPages\Listing.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\mc22ft.pubxml" />
+    <None Include="Scripts\jquery-1.9.0-vsdoc.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddPages\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddPages\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Infrastructure\MyValidationExtension.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Pages\AddPages\DetailsAdd.aspx.cs">
+      <DependentUpon>DetailsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddPages\DetailsAdd.aspx.designer.cs">
+      <DependentUpon>DetailsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AreaType.cs" />
+    <Compile Include="Model\DAL\AreaTypeDAL.cs" />
+    <Compile Include="Pages\AddPages\CreateAdd.aspx.cs">
+      <DependentUpon>CreateAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddPages\CreateAdd.aspx.designer.cs">
+      <DependentUpon>CreateAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -112,6 +154,7 @@
   <ItemGroup>
     <Content Include="Pages\Shered\Site.Master" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,9 +162,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

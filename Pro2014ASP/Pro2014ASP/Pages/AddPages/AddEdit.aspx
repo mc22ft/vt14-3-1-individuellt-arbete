@@ -24,9 +24,7 @@
         SelectMethod="AddAddsFormView_GetItem"
         UpdateMethod="CustomerFormView_UpdateItem">
         
-        <EditItemTemplate>
-
-            
+        <EditItemTemplate>           
 
 
             <div class="editor-label">
@@ -63,6 +61,12 @@
                 <asp:TextBox ID="Town" runat="server" Text='<%# BindItem.Town %>' MaxLength="25" />
             </div>
 
+            <div>
+                <label for="Postalcode">Postnummer</label>
+            </div>
+            <div>
+                <asp:TextBox ID="Postalcode" runat="server" Text='<%# BindItem.Postalcode %>' MaxLength="5" />
+            </div>
 
             <div class="editor-label">
                 <label for="Name">Namn</label>

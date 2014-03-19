@@ -15,11 +15,12 @@ namespace Pro2014ASP
 
             routes.MapPageRoute("Listing", "Annonser", "~/Pages/AddPages/Listing.aspx");
 
-            //        routes.MapPageRoute("Customers",       "kunder",              "~/Pages/CustomerPages/Listing.aspx");
+            routes.MapPageRoute("AddCreate", "Annonser/nyAnnons", "~/Pages/AddPages/CreateAdd.aspx");
+
             //        routes.MapPageRoute("CustomerCreate",  "kunder/ny",           "~/Pages/CustomerPages/Create.aspx");
-            //        routes.MapPageRoute("CustomerDetails", "kunder/{id}",         "~/Pages/CustomerPages/Details.aspx");
-            //        routes.MapPageRoute("CustomerEdit",    "kunder/{id}/edit",   "~/Pages/CustomerPages/Edit.aspx");
-            //        routes.MapPageRoute("CustomerDelete",  "kunder/{id}/tabort", "~/Pages/CustomerPages/Delete.aspx");
+            routes.MapPageRoute("AddDetails", "Annonser/{id}", "~/Pages/AddPages/DetailsAdd.aspx");
+            routes.MapPageRoute("AddEdit", "Annonser/{id}/redigera", "~/Pages/AddPages/AddEdit.aspx");
+            //routes.MapPageRoute("CustomerDelete",  "kunder/{id}/tabort", "~/Pages/CustomerPages/Delete.aspx");
 
             //        routes.MapPageRoute("Error",            "serverfel",          "~/Pages/Shared/Error.aspx");
 

@@ -10,15 +10,18 @@ namespace Pro2014ASP
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-            //    "~/Scripts/modernizr-*"
-            //));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                //"~/Content/reset.css",
-                //"~/Content/typographic-base.css",
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
+                "~/Content/bootstrap.css",
+                "~/Content/css.css"
                 //"~/Content/site.css"
             ));
+
+            bundles.Add(new ScriptBundle("~/Scripts/bootstrap").Include(
+                "~/Content/bootstrap.js",
+                "~/Scripts/jquery-1.9.0.js"
+            ));
+
+            
         }
     }
 }
