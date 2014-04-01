@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Planket.Pages.Shered.Site" ViewStateMode="Disabled" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <%-- Script som länkas in - Måste använda tilde täcken här!--%>
+    <%: System.Web.Optimization.Styles.Render("~/Content/bootstrap") %>
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap") %>
+</head>
+<body>
+    <form id="MainForm" runat="server">
+       
+         <header>                               <%-- HEADER --%>
+            <h1>Planket.SE</h1>
+        </header>
+                                             <%-- Snabb länkar --%>
+        <div class="link">
+            <asp:HyperLink runat="server" Text="Starsida" NavigateUrl='<%$ RouteUrl:routename = AnnonsList %>'/>
+            <asp:HyperLink runat="server" Text="Annonsera" NavigateUrl='<%$ RouteUrl:routename = AnnonsCreate %>'/>
+            <asp:HyperLink runat="server" Text="Redigera kategori" NavigateUrl='<%$ RouteUrl:routename = KategoriPage %>'/>          
+        </div>
+                             <%-- Sid text för den sida som genereras ut --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+     <div>
+        <asp:ContentPlaceHolder ID="Message" runat="server">              
+             <asp:Panel ID="SuccessPanel" runat="server">
+                <asp:Label ID="SuccessLabel" runat="server" Text="Label"></asp:Label>
+            </asp:Panel>
+        </asp:ContentPlaceHolder>
+    </div>
+
+     <div>               <%-- !! Här genereras varje aspx sida ut denna master page!! --%>
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+                                             <%-- FOOTER --%>
+        <footer>
+            <h4>Projekt - Made by Mathias Claesson - LNU - 2014 - mc22ft - DateBasTeknik - ASP.NET</h4>
+        </footer>
+    </form>
+</body>
+</html>
