@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     
     <%-- Presenterar meddelande --%>
-    <asp:ValidationSummary runat="server" />
+    <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" />
 
     <asp:FormView ID="AnnonsEditFormView" runat="server"
         ItemType="Planket.Model.Annons"
@@ -42,8 +42,7 @@
                 <label for="EditPris">Pris</label>
             </div>
             <div class="editor-field">
-                <asp:TextBox ID="EditPris" runat="server" Text='<%# BindItem.Pris %>' />
-                <p>Kr</p>
+                <asp:TextBox ID="EditPris" runat="server" Text='<%# BindItem.Pris %>' />                
                 <asp:RequiredFieldValidator ID="EditPrisRequiredFieldValidator" runat="server" 
                     ControlToValidate="EditPris"
                     Text="*"
@@ -106,8 +105,8 @@
 
                           <%-- Knappar för att att utföra updatering eller avbryta updatering --%>
             <div class="link">
-                <asp:LinkButton runat="server" Text="Spara" CommandName="Update" />
-                <asp:HyperLink runat="server" Text="Avbryt" NavigateUrl='<%# GetRouteUrl("AnnonsDetails", new { id = Item.AnnonsID }) %>' />
+                <asp:LinkButton runat="server" Text="Spara" CommandName="Update" class="btn btn-success btn-xs" />
+                <asp:HyperLink runat="server" Text="Avbryt" NavigateUrl='<%# GetRouteUrl("AnnonsDetails", new { id = Item.AnnonsID }) %>' class="btn btn-primary btn-xs" />
             </div> 
         </EditItemTemplate>
     </asp:FormView>

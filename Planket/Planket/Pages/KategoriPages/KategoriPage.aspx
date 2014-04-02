@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
     <%-- Presenterar meddelande --%>
-    <asp:ValidationSummary runat="server" />
+    <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" />
 
     <asp:ListView ID="KategoriListView" runat="server"
         ItemType="Planket.Model.KategoriTyp"
@@ -38,11 +38,11 @@
                 <td> <%#: Item.Kategorityp %> </td>
                 <td>
                      <%-- ta bort och redigera kategorityp. Kommandonamnen är VIKTIGA! LÄNKA IN JAVASCRIPT --%>                                       
-                    <asp:LinkButton runat="server" CommandName="Delete" Text="Ta bort" CausesValidation="false"                        
+                    <asp:LinkButton runat="server" CommandName="Delete" Text="Ta bort" CausesValidation="false" class="btn btn-danger btn-xs"                      
                         OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("kategoriTyp")) %>' 
                         />                     
                     
-                    <asp:LinkButton runat="server" CommandName="Edit" Text="Redigera" CausesValidation="false" />
+                    <asp:LinkButton runat="server" CommandName="Edit" Text="Redigera" CausesValidation="false" class="btn btn-primary btn-xs"/>
                 </td>
             </tr>            
         </ItemTemplate>
@@ -65,8 +65,8 @@
                 <td>
                     <%-- "Kommandknappar" för att lägga till en ny kunduppgift och rensa texfälten. Kommandonamnen är VIKTIGA! --%>
                         <%-- JAVASCRIPT för att betraktas som en POSTNING --%>
-                    <asp:LinkButton runat="server" CommandName="Insert" Text="Lägg till" />
-                    <asp:LinkButton runat="server" CommandName="Cancel" Text="Rensa" CausesValidation="false" />
+                    <asp:LinkButton runat="server" CommandName="Insert" Text="Lägg till" class="btn btn-success btn-xs" />
+                    <asp:LinkButton runat="server" CommandName="Cancel" Text="Rensa" CausesValidation="false" class="btn btn-primary btn-xs"/>
                 </td>
             </tr>
         </InsertItemTemplate>

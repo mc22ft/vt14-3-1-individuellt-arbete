@@ -6,6 +6,12 @@ h1{
 }
 
 h3{
+    margin-left:30px;
+    
+}
+
+.MainContent{
+    margin-left:30px;
     
 }
 
@@ -14,9 +20,22 @@ h3{
 }
 
 .add{
-    border:solid 2px black; 
+    border:solid 1px black;
 }
 
 .Description{
     text-align:center;
 }
+
+.center{
+    text-align:center;
+}
+
+.Rubrik{
+    text-align:center;
+}
+
+Pris{
+    text-align:center;
+}
+

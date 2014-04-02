@@ -9,19 +9,19 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
      
     <%-- Presenterar meddelande --%>
-     <asp:ValidationSummary runat="server" />   
+     <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" />   
 
     
-    <asp:FormView ID="CreateAnnonsFormView" runat="server"
+    <asp:FormView ID="CreateAnnonsFormView" runat="server" class="center"
         Itemtype="Planket.Model.Annons"
         InsertMethod="CreateAnnonsFormView_InsertItem"        
         DefaultMode="Insert"
         RenderOuterTables="false">        
-
+       
         <InsertItemTemplate>
 
              <%-- Kontak uppgifter --%>
-         <div class="contact">
+         <div class="center"  >
             <div>
                 <label for="Rubrik">Rubrik</label>
             </div>
@@ -41,8 +41,7 @@
                 <label for="Pris">Pris</label>
             </div>
             <div>
-                <asp:TextBox ID="Pris" runat="server" Text='<%# BindItem.Pris %>' MaxLength="10" />
-                <p>Kr</p>               
+                <asp:TextBox ID="Pris" runat="server" Text='<%# BindItem.Pris %>' MaxLength="10" />                              
                  <asp:RequiredFieldValidator ID="PrisRequiredFieldValidator" runat="server" 
                     ControlToValidate="Pris"
                      Text="*"
@@ -86,8 +85,9 @@
                     DataTextField="Kategorityp"
                     DataValueField="KategoriID"
                     SelectedValue='<%# BindItem.KategoriID %>'/>
-
-                <asp:HyperLink ID="NewKategoriHyperLink" runat="server" Text="Lägg till ny Kategori" NavigateUrl='<%$ RouteUrl:routename = KategoriPage %>' />
+                <div>
+                    <asp:HyperLink ID="NewKategoriHyperLink" runat="server" Text="Lägg till ny Kategori" NavigateUrl='<%$ RouteUrl:routename = KategoriPage %>' />
+                </div>
             </li>
             
              <li>
@@ -103,8 +103,8 @@
 
             <div class="link">
                 <%-- JAVASCRIPT för att betraktas som en POSTNING --%>
-                <asp:LinkButton runat="server" CommandName="Insert" Text="Lägg till" />
-                <asp:LinkButton runat="server" CommandName="Cancel" Text="Rensa" CausesValidation="false" />
+                <asp:LinkButton runat="server" CommandName="Insert" Text="Lägg till" class="btn btn-success btn-xs" />
+                <asp:LinkButton runat="server" CommandName="Cancel" Text="Rensa" CausesValidation="false" class="btn btn-primary btn-xs" />
             </div>
 
         </InsertItemTemplate>        

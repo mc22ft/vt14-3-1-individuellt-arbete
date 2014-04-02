@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
       <%-- Presenterar meddelande --%>
-      <asp:ValidationSummary runat="server" />   
+      <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" />   
      
     
     <asp:FormView ID="AnnonsFormViewDitails" runat="server"
@@ -20,14 +20,15 @@
          <ItemTemplate>
                     <%-- Mall för nya rader. --%>  
 
-          <div class="add">
-            <div>
+          <div class="add well well-lg">
+          
+             <div class="Rubrik">
                   <h2><%#: Item.Rubrik %></h2>
             </div>
-            <div>
-                  <p>Pris: <%#: Item.Pris %></p>
+            <div class="Pris">
+                  <p>Pris: <%#: Item.Pris %> Kr</p>
             </div>
-            <div class="Description">                         
+            <div class="Description well ">                         
                   <p><%#: Item.Beskrivning %></p>
             </div>             
             <div>
@@ -39,13 +40,13 @@
         </div>
             <div class="link">
                 <%-- Bottoms, "ta bort" ligger det javascript på --%>
-                <asp:HyperLink runat="server" Text="Redigera" NavigateUrl='<%# GetRouteUrl("AnnonsEdit", new { id = Item.AnnonsID }) %>' />
-                <asp:LinkButton runat="server" ID="DeleteLinkButton" Text="Ta bort" 
+                <asp:HyperLink runat="server" Text="Redigera" NavigateUrl='<%# GetRouteUrl("AnnonsEdit", new { id = Item.AnnonsID }) %>' class="btn btn-primary btn-xs" />
+                <asp:LinkButton runat="server" ID="DeleteLinkButton" Text="Ta bort" class="btn btn-danger btn-xs"
                                  CausesValidation="false" 
                                  OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("Rubrik")) %>' 
                                   OnCommand="DeleteLinkButton_Command"            
                                   CommandArgument='<%$ RouteValue:id %>'/>
-                <asp:HyperLink ID="BackHyperLink" runat="server" Text="Tillbaka"  NavigateUrl='<%# GetRouteUrl("AnnonsList", null) %>' />
+                <asp:HyperLink ID="BackHyperLink" runat="server" Text="Tillbaka"  NavigateUrl='<%# GetRouteUrl("AnnonsList", null) %>' class="btn btn-primary btn-xs" />
             </div>
        </ItemTemplate>
 

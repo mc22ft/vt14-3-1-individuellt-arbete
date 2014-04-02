@@ -13,13 +13,35 @@
     <form id="MainForm" runat="server">
        
          <header>                               <%-- HEADER --%>
+                                             <%-- Bootstrap meny--%>
+        <div class="navbar navbar-default">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">mc22ft</a>
+          </div>
+          <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="http://www.lnu.se">Lnu.se</a></li>
+              <li><a href="http://www.asp.net">ASP.NET</a></li>      
+            </ul>   
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://coursepress.lnu.se/program/webbprogrammerare/student/">Min student sida</a></li>      
+            </ul>
+          </div>
+        </div>
+
             <h1>Planket.SE</h1>
         </header>
+        
                                              <%-- Snabb länkar --%>
         <div class="link">
-            <asp:HyperLink runat="server" Text="Starsida" NavigateUrl='<%$ RouteUrl:routename = AnnonsList %>'/>
-            <asp:HyperLink runat="server" Text="Annonsera" NavigateUrl='<%$ RouteUrl:routename = AnnonsCreate %>'/>
-            <asp:HyperLink runat="server" Text="Redigera kategori" NavigateUrl='<%$ RouteUrl:routename = KategoriPage %>'/>          
+            <asp:HyperLink runat="server" Text="Starsida" NavigateUrl='<%$ RouteUrl:routename = AnnonsList %>' class="btn btn-primary btn-xs" />
+            <asp:HyperLink runat="server" Text="Annonsera" NavigateUrl='<%$ RouteUrl:routename = AnnonsCreate %>' class="btn btn-primary btn-xs" />
+            <asp:HyperLink runat="server" Text="Redigera kategori" NavigateUrl='<%$ RouteUrl:routename = KategoriPage %>' class="btn btn-primary btn-xs" />          
         </div>
                              <%-- Sid text för den sida som genereras ut --%>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -39,8 +61,14 @@
     </div>
                                              <%-- FOOTER --%>
         <footer>
-            <h4>Projekt - Made by Mathias Claesson - LNU - 2014 - mc22ft - DateBasTeknik - ASP.NET</h4>
+            <div class="navbar navbar-fixed-bottom" id="footer">
+                <div class="container">
+                    <h4 class="text-muted">Made by Mathias Claesson - mc22ft - DateBasTeknik - ASP.NET</h4>
+                </div>
+            </div>
+           
         </footer>
     </form>
+
 </body>
 </html>

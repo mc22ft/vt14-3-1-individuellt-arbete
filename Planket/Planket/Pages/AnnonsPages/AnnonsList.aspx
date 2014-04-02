@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
     <%-- Presenterar meddelande --%>
-    <asp:ValidationSummary runat="server" />
+    <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" />
     
     <div>        
         <asp:HyperLink runat="server" Text="Lägg till annons" NavigateUrl='<%$ RouteUrl:routename = AnnonsCreate %>'/> 
@@ -24,6 +24,7 @@
         <LayoutTemplate>          
             <table class="table table-bordered table-striped table-hover">
                     <%-- Meny --%>
+
                     <tr>
                         <th>Rubrik</th>
                         <th>Pris</th>                                                                                            
