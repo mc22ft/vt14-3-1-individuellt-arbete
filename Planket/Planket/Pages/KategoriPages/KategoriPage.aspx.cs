@@ -93,8 +93,8 @@ namespace Planket.Pages.KategoriPages
                 }
                 catch (Exception)//Fångar upp om någor gick fel  
                 {
-                    ModelState.AddModelError(String.Empty, "Ett oväntat fel inträffade då kunduppgiften skulle tas bort.");
-                }
+                    ModelState.AddModelError(String.Empty, "Du kan inte ta bort en kategori som finns på en annons.");
+                }                                           //Ett oväntat fel inträffade då kunduppgiften skulle tas bort.
             }
         }
 

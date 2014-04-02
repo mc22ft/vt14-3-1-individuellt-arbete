@@ -38,9 +38,9 @@
                 <td> <%#: Item.Kategorityp %> </td>
                 <td>
                      <%-- ta bort och redigera kategorityp. Kommandonamnen är VIKTIGA! LÄNKA IN JAVASCRIPT --%>                                       
-                    <asp:LinkButton runat="server" CommandName="Delete" Text="Ta bort" 
-                        CausesValidation="false" 
-                        OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("kategoriTyp")) %>' />                     
+                    <asp:LinkButton runat="server" CommandName="Delete" Text="Ta bort" CausesValidation="false"                        
+                        OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("kategoriTyp")) %>' 
+                        />                     
                     
                     <asp:LinkButton runat="server" CommandName="Edit" Text="Redigera" CausesValidation="false" />
                 </td>

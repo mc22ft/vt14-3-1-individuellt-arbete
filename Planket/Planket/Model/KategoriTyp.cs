@@ -10,8 +10,7 @@ namespace Planket.Model
     public class KategoriTyp
     {
         public int KategoriID { get; set; }
-
-        [Required(ErrorMessage = "Ett kategori måste anges!")]
+        
         [StringLength(20, ErrorMessage = "Du kan inte ange mer än 20 tecken!")]
         public string Kategorityp { get; set; }
     }
