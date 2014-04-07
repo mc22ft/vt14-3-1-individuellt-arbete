@@ -21,15 +21,15 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">mc22ft</a>
+            <a class="navbar-brand" href="#">Annonsplatsen Planket.SE</a>
           </div>
           <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="http://www.lnu.se">Lnu.se</a></li>
-              <li><a href="http://www.asp.net">ASP.NET</a></li>      
+              <li class="active"><a href="#">Logga in</a></li>
+              <li><a href="#">Företag</a></li>      
             </ul>   
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://coursepress.lnu.se/program/webbprogrammerare/student/">Min student sida</a></li>      
+              <li><a href="https://coursepress.lnu.se/program/webbprogrammerare/student/">Kontakta oss</a></li>      
             </ul>
           </div>
         </div>
@@ -43,10 +43,12 @@
             <asp:HyperLink runat="server" Text="Annonsera" NavigateUrl='<%$ RouteUrl:routename = AnnonsCreate %>' class="btn btn-primary btn-xs" />
             <asp:HyperLink runat="server" Text="Redigera kategori" NavigateUrl='<%$ RouteUrl:routename = KategoriPage %>' class="btn btn-primary btn-xs" />          
         </div>
-                             <%-- Sid text för den sida som genereras ut --%>
-    <asp:ContentPlaceHolder ID="head" runat="server">
+                                 <%-- Sid text för den sida som genereras ut --%>
+        <div class="MyHeadPlaceHolder">
+            <asp:ContentPlaceHolder ID="head" runat="server">
         
-    </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
+        </div>
      <div>
         <asp:ContentPlaceHolder ID="Message" runat="server">              
              <asp:Panel ID="SuccessPanel" runat="server">
@@ -54,8 +56,8 @@
             </asp:Panel>
         </asp:ContentPlaceHolder>
     </div>
-
-     <div>               <%-- !! Här genereras varje aspx sida ut denna master page!! --%>
+        <%-- !! Här genereras varje aspx sida ut denna master page!!  style="margin-left: 200px; margin-right: 200px;" --%>
+     <div class="MyMainPlaceHolder" >               
         <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
         </asp:ContentPlaceHolder>
     </div>

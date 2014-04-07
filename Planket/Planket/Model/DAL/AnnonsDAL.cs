@@ -21,7 +21,7 @@ namespace Planket.Model.DAL
                     var annons = new List<Annons>(100);
 
                     // exekveras specifierad lagrad procedur.
-                    var cmd = new SqlCommand("AppSchema.usp_002_list_Annons", conn);
+                    var cmd = new SqlCommand("usp_002_Getlist_OrByID_Annons", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     //Öppnar anslutningen, databasen
@@ -70,7 +70,7 @@ namespace Planket.Model.DAL
                 try
                 {
                     // exekveras specifierad lagrad procedur.
-                    var cmd = new SqlCommand("AppSchema.usp_002_getById_Annons", conn);
+                    var cmd = new SqlCommand("usp_002_Getlist_OrByID_Annons", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     //Lägger till den parameter som den lagrade proceduren kärver

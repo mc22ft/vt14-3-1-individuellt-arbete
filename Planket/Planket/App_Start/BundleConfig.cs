@@ -13,12 +13,13 @@ namespace Planket
             //Inlänkade css, min egen css och boostrap
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                 "~/Content/bootstrap.css",
-                "~/Content/Style.css"
+                "~/Content/bootstrap.js",
+                "~/Content/Css.css"
             ));
 
             //Inlänkade javascript
             bundles.Add(new ScriptBundle("~/Scripts/bootstrap").Include(
-                "~/Content/bootstrap.js",
+                
                 "~/Scripts/jquery-1.9.0.js"
             ));
 

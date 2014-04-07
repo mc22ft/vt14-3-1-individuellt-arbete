@@ -21,12 +21,12 @@
         <InsertItemTemplate>
 
              <%-- Kontak uppgifter --%>
-         <div class="center"  >
+         <div class="MyCreate"  >
             <div>
                 <label for="Rubrik">Rubrik</label>
             </div>
             <div>
-                <asp:TextBox ID="Rubrik" runat="server" Text='<%# BindItem.Rubrik %>' MaxLength="50" />
+                <asp:TextBox class="MyEditPutIn" ID="Rubrik" runat="server" Text='<%# BindItem.Rubrik %>' MaxLength="50" />
                 <asp:RequiredFieldValidator ID="RubrikRequiredFieldValidator" runat="server" 
                         ControlToValidate="Rubrik"
                         Text="*"
@@ -41,7 +41,7 @@
                 <label for="Pris">Pris</label>
             </div>
             <div>
-                <asp:TextBox ID="Pris" runat="server" Text='<%# BindItem.Pris %>' MaxLength="10" />                              
+                <asp:TextBox class="MyEditPutIn" ID="Pris" runat="server" Text='<%# BindItem.Pris %>' MaxLength="10" />                              
                  <asp:RequiredFieldValidator ID="PrisRequiredFieldValidator" runat="server" 
                     ControlToValidate="Pris"
                      Text="*"
@@ -65,7 +65,7 @@
                 <label for="Beskrivning">Beskrivning</label>
             </div>
             <div>
-                <asp:TextBox ID="Beskrivning" runat="server" Text='<%# BindItem.Beskrivning %>' TextMode="MultiLine" MaxLength="500" />
+                <asp:TextBox class="MyEditBox MyEditPutIn" ID="Beskrivning" runat="server" Text='<%# BindItem.Beskrivning %>' TextMode="MultiLine" MaxLength="500" />
                 <asp:RequiredFieldValidator ID="BeskrivningRequiredFieldValidator" runat="server" 
                     ControlToValidate="Beskrivning"
                     Text="*"
@@ -100,12 +100,12 @@
                     DataValueField="LanID"
                     SelectedValue='<%# BindItem.LanID %>'/>
             </li>
-
+        </div>
             <div class="link">
                 <%-- JAVASCRIPT för att betraktas som en POSTNING --%>
                 <asp:LinkButton runat="server" CommandName="Insert" Text="Lägg till" class="btn btn-success btn-xs" />
                 <asp:LinkButton runat="server" CommandName="Cancel" Text="Rensa" CausesValidation="false" class="btn btn-primary btn-xs" />
-            </div>
+            
 
         </InsertItemTemplate>        
     </asp:FormView>

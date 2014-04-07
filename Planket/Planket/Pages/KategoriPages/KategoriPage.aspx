@@ -22,7 +22,7 @@
 
         <LayoutTemplate>
             <table>
-                <tr><%-- Meny --%>
+                <tr class="TableKategori"><%-- Meny --%>
                     <th>Kategorier</th>
                     <th>
                         <asp:LinkButton ID="BackToAddAnnonsLinkButton" runat="server" Text="Tillbaka" OnClick="BackToAddAnnonsLinkButton_Click" />                     
@@ -34,7 +34,7 @@
         </LayoutTemplate>
         
         <ItemTemplate>            
-            <tr>
+            <tr class="TableKategori">
                 <td> <%#: Item.Kategorityp %> </td>
                 <td>
                      <%-- ta bort och redigera kategorityp. Kommandonamnen är VIKTIGA! LÄNKA IN JAVASCRIPT --%>                                       
@@ -50,7 +50,7 @@
         <EmptyDataTemplate>
             <%-- Detta visas då kategorier saknas i databasen. --%>
             <table>
-                <tr>
+                <tr class="TableKategori">
                     <td>  Kategori uppgifter saknas!  </td>
                 </tr>
             </table>
@@ -58,7 +58,7 @@
 
          <InsertItemTemplate>
             <%-- Mall nya kunduppgifter. Visas bara om InsertItemPosition har värdet FirstItemPosition eller LasItemPosition.--%>
-            <tr>
+            <tr class="TableKategori">
                 <td>
                     <asp:TextBox ID="KategoriTyp" runat="server" Text='<%# BindItem.Kategorityp %>' MaxLength="20" />                 
                 </td>  
@@ -73,7 +73,7 @@
 
         <EditItemTemplate>
             <%-- Mall för rad i tabellen för att redigera Kategorier. --%>
-            <tr>
+            <tr class="TableKategori">
                 <td>
                     <asp:TextBox ID="KategoriTyp" runat="server" Text='<%# BindItem.Kategorityp %>' MaxLength="20" />                    
                 </td>              

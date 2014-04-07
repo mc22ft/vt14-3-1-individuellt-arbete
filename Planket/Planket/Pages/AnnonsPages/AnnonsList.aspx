@@ -22,7 +22,7 @@
         DataKeyName="AnnonsID">
          
         <LayoutTemplate>          
-            <table class="table table-bordered table-striped table-hover">
+            <table class="table table-striped table-hover">
                     <%-- Meny --%>
 
                     <tr>

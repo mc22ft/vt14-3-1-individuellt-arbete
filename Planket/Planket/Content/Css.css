@@ -1,0 +1,82 @@
+﻿body {
+    
+}
+h1{
+    text-align:center;
+}
+
+h3{
+    margin-left:30px;
+    
+}
+
+.MainContent{
+    margin-left:30px;
+    
+}
+
+.link{
+    text-align:center;
+}
+
+.add{
+    border:solid 1px black;
+}
+
+.Description{
+    text-align:center;
+}
+
+.center{
+    text-align:center;
+}
+
+.Rubrik{
+    text-align:center;
+}
+
+Pris{
+    text-align:center;
+}
+
+.MyMainPlaceHolder{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.MyHeadPlaceHolder{
+    margin-left:200px;
+}
+.MyMainEdit{
+    padding-bottom:170px;
+}
+
+.MainEdit{
+    float:left;
+    margin-right: 130px;
+}
+
+.DroppEdit{
+
+}
+
+.MyEditBox{
+    height: 100px;
+}
+.MyEditPutIn{
+    width: 300px;
+}
+
+.MyCreate{   
+    border: solid 1px black;
+    padding: 30px;
+    margin-bottom:10px;
+}
+
+.TableKategori{
+    padding: 10px;
+}
+
+td{
+    padding:5px;
+}
