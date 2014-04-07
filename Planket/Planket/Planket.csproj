@@ -99,6 +99,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Pages\Shered\Error.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -157,6 +158,13 @@
     </Compile>
     <Compile Include="Pages\KategoriPages\KategoriPage.aspx.designer.cs">
       <DependentUpon>KategoriPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shered\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shered\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Shered\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
