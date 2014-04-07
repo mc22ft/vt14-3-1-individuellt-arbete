@@ -20,7 +20,7 @@
          <ItemTemplate>
                     <%-- Mall för nya rader. --%>  
 
-          <div class="add well well-lg">
+          <div class="Frame add well well-lg">
           
              <div class="Rubrik">
                   <h2><%#: Item.Rubrik %></h2>

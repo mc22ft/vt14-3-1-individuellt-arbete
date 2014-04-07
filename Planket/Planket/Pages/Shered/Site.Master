@@ -49,10 +49,10 @@
         
             </asp:ContentPlaceHolder>
         </div>
-     <div>
+     <div class="SuccessMessage">
         <asp:ContentPlaceHolder ID="Message" runat="server">              
              <asp:Panel ID="SuccessPanel" runat="server">
-                <asp:Label ID="SuccessLabel" runat="server" Text="Label"></asp:Label>
+                <asp:Label class="alert alert-dismissable alert-success" ID="SuccessLabel" runat="server" Text="Label"></asp:Label>
             </asp:Panel>
         </asp:ContentPlaceHolder>
     </div>

@@ -60,7 +60,15 @@
             <%-- Mall nya kunduppgifter. Visas bara om InsertItemPosition har värdet FirstItemPosition eller LasItemPosition.--%>
             <tr class="TableKategori">
                 <td>
-                    <asp:TextBox ID="KategoriTyp" runat="server" Text='<%# BindItem.Kategorityp %>' MaxLength="20" />                 
+                    <asp:TextBox ID="KategoriTyp1" runat="server" Text='<%# BindItem.Kategorityp %>' MaxLength="20" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" 
+                        ControlToValidate="KategoriTyp1"
+                        Text="*"
+                        ErrorMessage="Du måste ange en KategoriTyp." 
+                        ForeColor="#CC0000" 
+                        Display="None" 
+                        SetFocusOnError="True">
+                    </asp:RequiredFieldValidator>                
                 </td>  
                 <td>
                     <%-- "Kommandknappar" för att lägga till en ny kunduppgift och rensa texfälten. Kommandonamnen är VIKTIGA! --%>
@@ -75,25 +83,22 @@
             <%-- Mall för rad i tabellen för att redigera Kategorier. --%>
             <tr class="TableKategori">
                 <td>
-                    <asp:TextBox ID="KategoriTyp" runat="server" Text='<%# BindItem.Kategorityp %>' MaxLength="20" />                    
+                    <asp:TextBox ID="KategoriTyp2" runat="server" Text='<%# BindItem.Kategorityp %>' MaxLength="20" /> 
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" 
+                        ControlToValidate="KategoriTyp2"
+                        Text="*"
+                        ErrorMessage="Du måste ange en KategoriTyp." 
+                        ForeColor="#CC0000" 
+                        Display="None" 
+                        SetFocusOnError="True">
+                    </asp:RequiredFieldValidator>                   
                 </td>              
                        
                 <td>
                     <%-- "Kommandknappar" för att uppdatera en kunduppgift och avbryta. Kommandonamnen är VIKTIGA! --%>
                         <%-- JAVASCRIPT för att betraktas som en POSTNING --%>
                     <asp:LinkButton runat="server" CommandName="Update" Text="Spara" />
-                    <asp:LinkButton runat="server" CommandName="Cancel" Text="Avbryt" CausesValidation="false" />
-
-                        <%-- Valedering för TextBoxen, för lägga till och redigera textboxarna --%>
-                        <%--                    KategoriTyp                       --%>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                        ControlToValidate="KategoriTyp"
-                        Text="*"
-                        ErrorMessage="Du måste ange en KategoriTyp." 
-                        ForeColor="#CC0000" 
-                        Display="None" 
-                        SetFocusOnError="True">
-                    </asp:RequiredFieldValidator>  
+                    <asp:LinkButton runat="server" CommandName="Cancel" Text="Avbryt" CausesValidation="false" />                       
                 </td>
             </tr>
         </EditItemTemplate>

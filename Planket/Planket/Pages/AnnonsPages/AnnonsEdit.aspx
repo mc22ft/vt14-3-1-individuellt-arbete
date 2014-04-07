@@ -21,7 +21,7 @@
         
         <%-- Genererar ut textboxar med aktuellt värde i för updatering --%>
         <EditItemTemplate>
-            <div class="MyMainEdit add well well-lg">
+            <div class="MyMainEdit Frame add well well-lg">
                 <div class="MainEdit">
                     <%-- Rubrik  --%>
                     <div class="editor-label">

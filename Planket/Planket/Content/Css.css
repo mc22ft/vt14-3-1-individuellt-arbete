@@ -80,3 +80,11 @@ Pris{
 td{
     padding:5px;
 }
+
+.SuccessMessage{
+    text-align:center;
+}
+
+.Frame{
+    margin-top:30px;
+}
